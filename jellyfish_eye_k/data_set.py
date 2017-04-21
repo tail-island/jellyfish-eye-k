@@ -21,18 +21,18 @@ def load_data(data_path='./data'):
 
     def train_validate_and_test(x):
         np.random.shuffle(x)
-        
+
         return x[20:], x[:20], x[:20]  # データ数が少ないので、検証データとテスト・データは同じにします。
-    
+
     def dataset(xs):
         xs = tuple(xs)
 
         x = np.concatenate(xs)
         y = np.concatenate([np.full(x.shape[0], i) for i, x in enumerate(xs)])
-        
+
         i = np.arange(x.shape[0])
         np.random.shuffle(i)
 
         return x[i], y[i]
-    
+
     return map(dataset, zip(*map(train_validate_and_test, map(load_class, sorted(map(attrgetter('path'), os.scandir(data_path)))))))

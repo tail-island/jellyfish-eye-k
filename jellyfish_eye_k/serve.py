@@ -1,6 +1,6 @@
 import numpy as np
 np.random.seed(1337)
-    
+
 from keras.models import load_model
 
 
@@ -14,10 +14,10 @@ def classify(x):
 if __name__ == '__main__':
     import matplotlib.pyplot as plot
     import time
-    
+
     from jellyfish_eye_k.data_set import load_data
 
-    
+
     _, _, (x_test, y_test) = load_data()
 
     y_pred = []
