@@ -28,7 +28,7 @@ def load_data(data_path='./data'):
         xs = tuple(xs)
 
         x = np.concatenate(xs)
-        y = np.concatenate([np.full(x.shape[0], i) for i, x in enumerate(xs)])
+        y = np.concatenate([np.full(x.shape[0], i, np.int32) for i, x in enumerate(xs)])
 
         i = np.arange(x.shape[0])
         np.random.shuffle(i)
