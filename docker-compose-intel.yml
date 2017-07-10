@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    image: rojima1/python
+    privileged: true
+    command: emacs
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ./data:/home/developer/data
+      - ./jellyfish_eye_k:/home/developer/jellyfish_eye_k
+      - /tmp/.X11-unix:/tmp/.X11-unix
