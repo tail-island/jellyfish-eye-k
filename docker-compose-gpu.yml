@@ -5,13 +5,13 @@ services:
     image: rojima1/python-cuda
     privileged: true
     command: emacs
+    working_dir: /home/developer/jellyfish-eye-k
     environment:
       - DISPLAY=${DISPLAY}
       - PATH=/usr/local/nvidia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       - LD_LIBRARY_PATH=/usr/local/nvidia/lib64
     volumes:
-      - ./data:/home/developer/data
-      - ./jellyfish_eye_k:/home/developer/jellyfish_eye_k
+      - .:/home/developer/jellyfish-eye-k
       - /tmp/.X11-unix:/tmp/.X11-unix
       - nvidia_driver_381.22:/usr/local/nvidia
 

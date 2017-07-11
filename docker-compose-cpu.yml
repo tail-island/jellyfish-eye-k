@@ -5,9 +5,9 @@ services:
     image: rojima1/python
     privileged: true
     command: emacs
+    working_dir: /home/developer/jellyfish-eye-k
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
-      - ./data:/home/developer/data
-      - ./jellyfish_eye_k:/home/developer/jellyfish_eye_k
+      - .:/home/developer/jellyfish-eye-k
       - /tmp/.X11-unix:/tmp/.X11-unix
