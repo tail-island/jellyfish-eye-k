@@ -2,9 +2,8 @@ import numpy as np
 np.random.seed(1337)
 
 from jellyfish_eye_k.data_set import load_data
-from keras.layers.convolutional import Conv2D, MaxPooling2D
-from keras.layers.core import Dense, Dropout, Flatten
-from keras.models import Sequential, save_model
+from tensorflow.contrib.keras.api.keras.layers import Conv2D, Dense, Dropout, Flatten, MaxPooling2D
+from tensorflow.contrib.keras.api.keras.models import Sequential, save_model
 
 
 (x_train, y_train), (x_validation, y_validation), (x_test, y_test) = load_data()

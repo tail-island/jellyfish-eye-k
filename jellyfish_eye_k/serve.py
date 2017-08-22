@@ -1,7 +1,7 @@
 import numpy as np
 np.random.seed(1337)
 
-from keras.models import load_model
+from tensorflow.contrib.keras.api.keras.models import load_model
 
 
 model = load_model('./jellyfish_eye.h5')
